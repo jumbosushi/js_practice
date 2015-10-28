@@ -1,1 +1,76 @@
 ch.3
+Types, values, and variables
+
+
+Js has two types: primitive type and object type
+primitive: strings, boolean, null, undefined
+object: properties, functions,
+
+"constructors" - functions written to make new object 
+
+JS has also mutable and immutable types (whether they can be edited or not).
+- String is immutable!
+
+Varibales are declared with "var"
+Js variables are untyped
+
+var outside functinos -> global variable
+var within functions -> have function scope
+
+-------
+3.1 Numbers
+
+All numbers are 64 bit floting-point value AKA between -2^53 to 2^53
+This raises a problem:
+>>var x = 0.3 - 0.2
+>>var y = 0.2 - 0.1
+>>x == y // return false 
+
+With addition to base 10 numbers, js also accept base-16 numbers
+(0-9 and A-F)
+-> call it with "0x" or "0X"
+ex. 0xff // 15*16 + 15-> 255
+
+base-8 numbers are called by "0"
+ex. 0377 // 3*64 + 7*8 + 7 = 255
+
+"Math" object provide powerful mathmatical tools
+ex. Math.round(0.6) -> 1.0
+       Math.max(x,y,z) // return the highest number 
+
+"Infinity" and "-Infinity" exists!
+0/0 or inifinity / 0 will produce NaN - Not a Number
+
+To check for NaN:
+-x != x will produce true if and only if x is NaN
+-.isNaN() 
+
+Setting the date:
+>> var now = new Date( 2010, 0, 1, 17, 10, 30)
+	-> 1st day of the 1st month in 2010 at 5:10:30 pm
+>> var.getFullYear()
+>> var.Day()
+>> var.toString()
+
+-----------------
+3.2 Text
+
+String can be made by both ' ' or " "
+' ' can be put inside " ", and vice versa
+ex. 'name = "MyForm" '
+
+When incorporating Js with HTML, the best practice is to decide and 
+follow which quotation to use for which
+This is because HTML can contain Js code in some cases:
+ex. <button onclick="alert('Thank you')"> </button>
+
+Escape sequence 
+ --> used to show the charc otherwise unshowable 
+ex. 'You/'re right!'
+/x__ --> greek word where _ are hex digits
+
+
+
+
+
+

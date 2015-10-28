@@ -1,2 +1,3 @@
-var x = 0;
-[x, x+1,x+2].forEach(console.log);
+var a = Infinity/0;
+console.log(a);
+
