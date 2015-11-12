@@ -1,4 +1,4 @@
-ch.3
+	ch.3
 Types, values, and variables
 
 
@@ -75,6 +75,7 @@ Strings
 s.length, s.slice(1,3), etc
 *String are immutable!
 ==> .toUppercase() returns a new string 
+--> s.charAt(#)   returns a char at that index
 
 RegExps = Regular Expressions 
 * often regrexp literals are put in between /'s 
@@ -117,6 +118,43 @@ Explicit conversions
 Number("2") 	=> 2
 Boolean([])	=> true
 String(null) 	=> TypeError
+
+Type comversion works on comparison!
+Following all return true:
+ "0" == false
+0 == false
+"0" == 0
+"0" == false
+
+toString() allows you to convert whateva in base form!
+var x = 17
+x.toString() => "10001"
+
+Rounding numbers!
+toFixed() convers # with # of decimals you specify
+toExponential() converts a num to String w/ e way
+toPrecision() shows as many decimals as you want
+var x = 123456.789
+x.toFixed() 		123456
+x.toFixed(1) 		123456.7
+x.toExponential(1)		1.2e+5
+x.toPrecision(10)		123456.789
+
+.parseInt() and .parseFloat() converts string in hexadominal format / 
+notmal string into a # with unrelated part left out!
+parseInt("5 chicken wings") 		5
+parseInt("-12.3")			-12
+parseInt("0xff")			255
+parseFloat("He left 3.14 pie")		NaN
+parseFloat("3.14 was his num")		3.14
+
+
+var now = Date();
+typeof ( now + 1) -> String 		+ converts to string
+typeof (now -1 ) -> number		- converts to num
+
+---------
+3.9 Variable Declaration 
 
 
 
