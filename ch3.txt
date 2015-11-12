@@ -156,7 +156,53 @@ typeof (now -1 ) -> number		- converts to num
 ---------
 3.9 Variable Declaration 
 
+multipl declaration 
+var i, sum, eh		; values are undefined
+var i = 0, sum = 1, eh = "canada"	
 
+----------
+3.10 Variable Scope
+
+var scope = "global"
+function checkscope() {
+   var scope = "local";		// sometimes called "shadow variable" of scope
+   return scope;
+}
+checkscope() 	==> "local"
+
+BUT
+
+var scope = "global"
+function checkscope() {
+   scope = "local";
+   return scope;
+}
+return scope	=> "local"
+
+*when you wanna use the same name for local var, use "var"
+
+Js have a FUNCTION SCOPE!!!
+"all variables declared within a function are visible throughout the function!
+=> throughout as in even before it is defined!
+
+var scope = "global"
+function checkscope() {
+   console.log(scope)		// return undefined!
+   scope = "local"
+   console.log(scope) 		// return "local"
+}
+
+wait wut?
+=> Good read (https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20&%20closures/ch3.md)
+
+global variables declared w/ var CAN NOT BE DELETED or nonconfigurable
+variables can be created w/out "var"
+variables defined this way is configurable
+
+var num = 1;
+fakevar = 2;
+delete num 	// false
+delete fakevar	// true 
 
 
 
