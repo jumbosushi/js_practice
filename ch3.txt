@@ -204,6 +204,8 @@ fakevar = 2;
 delete num 	// false
 delete fakevar	// true 
 
+scope chain
+
 
 
 
