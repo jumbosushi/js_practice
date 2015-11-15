@@ -204,7 +204,40 @@ fakevar = 2;
 delete num 	// false
 delete fakevar	// true 
 
-scope chain
+scope chain?
+First, understand lexical scoping 
+"in JavaScript, the scope of a 
+variable is defined by its location within the source code 
+(it is apparent lexically) and nested functions have access to variables 
+declared in their outer scope."
+ex: 
+function init() {
+     var name = "Mozilla";                // name is a local variable created by init
+     function displayName() {        // displayName() is the inner function, a closure
+            alert(name);                          // use variable declared in the parent function    
+     }
+     displayName();    
+};
+init();
+
+Wait, step back and let's learn function declaration
+https://stackoverflow.com/questions/336859/var-functionname-function-vs-function-functionname
+There are:
+1 Function Declaration
+2. "Anonymous" function Expression 
+3. Names function Expression
+4. Accessor Function Initializer
+5. Arrow Function Expression
+6. Constructor and Method Declaration
+
+So you can understand closures!
+https://stackoverflow.com/questions/111102/how-do-javascript-closures-work
+"In JavaScript, if you use the function keyword inside
+ another function, you are creating a closure."
+// note: read more answers cuz you're not getting closures
+// you need to get clusures before getting scope chain
+
+
 
 
 
