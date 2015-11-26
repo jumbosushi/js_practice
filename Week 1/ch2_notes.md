@@ -1,9 +1,9 @@
 #Ch.2 Beggining Javascript Note
-by Atsushi Yamamoto 
+by Atsushi Yamamoto
 
 ###Strings
-"The quote marks must match" 	<- ok
-'No good"				<- Not good
+"The quote marks must match"     <- ok
+'No good"                <- Not good
 - when you do wanna typee ' within a quote mark '', use back slash (**escape character**)
    'Hand me Ganpa's tools'
 
@@ -48,7 +48,7 @@ This is because when string1 is assigned to string2, the string is *copied rathe
 Check this out
 '''
 var mynumber = 1;
-var myVar;
+var myVar;      //undefined
 
 //Does the same thing!
 mynumber++
@@ -75,3 +75,26 @@ sidenote: promt takes in two params (<what is displayed>, <inital value>
 )
 
 document.write() write the values directly on the document!? woah there
+
+
+###Data Type Conversion
+parseInt() and parseFloat()
+They are called parse cuz js literally parses each character.
+If unknown is in the way, funtion returns what is has parsed thus far.
+
+
+###Arrays
+'''
+var myArray = new Array()
+// makes a new Array eh
+
+var mahArray = Array("eh", "hi", "byr", "that's a typo", "eh")
+
+var mahArray = new Array();
+mahArray[0] = "eh";
+mahArray[1] = "hi"; // an so on...
+
+
+'''
+
+
