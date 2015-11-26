@@ -14,7 +14,9 @@ f Form feed
 \t Tab
 \'  Single Quote
 \" Double quote
-\\ backslash
+\ backslash
+\x *FOR SPECIAL CHARACTERS!""
+    ex. /xB0 shows the degrees sign!
 
 
 ###Variables
@@ -41,3 +43,35 @@ NOT the new string
 This is because when string1 is assigned to string2, the string is *copied rather than shared!*
 
 ^This will be explained in the future chapters...hopefully
+
+###Increments ++ and -- increase or decrease the number by ones!
+Check this out
+'''
+var mynumber = 1;
+var myVar;
+
+//Does the same thing!
+mynumber++
+++mynumber
+'''
+
+But like, which one should I use?_
+In this example,
+'''
+mynumber = 1;
+// Ex 1
+myVar = (myNumber++ * 10 + 1);
+
+//Ex2
+myvar = (++mynumber * 10 + 1)
+'''
+In Ex1 the calculation is: 1 * 10 + 1 + 1== 12
+*at-the-end ++ add 1 after operations!*
+
+IN Ex2, the calculation is: 2 * 10 + 1 = 21
+**at-the-begeninning ++ add 1 before the oeperation!*
+
+sidenote: promt takes in two params (<what is displayed>, <inital value>
+)
+
+document.write() write the values directly on the document!? woah there
