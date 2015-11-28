@@ -30,3 +30,17 @@ switch is made of 4 parts
 - The break statements
 - The default statment
 
+'''
+switch (myName)
+{
+    case "Paul":
+        // some code
+        break;
+    case "John":
+        // some other code
+        break;
+    defalt:
+        // default code
+        break;
+}
+'''
