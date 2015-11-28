@@ -43,4 +43,60 @@ switch (myName)
         // default code
         break;
 }
+
+//You can run different cases by:
+switch (secretNumber)
+{
+case 1:
+case 2:
+    // some code;
+    break;
+default:
+    // default code;
+    break;
+}
 '''
+
+###for-Loop
+'''
+for (loopCOunter=1;loopCounter<=3;loopCounter++)
+{
+    execute this code;
+}
+'''
+
+###for-in-loop (for-each)
+ex
+'''
+// iterate through all elements in myArray
+var elementindex;
+for (elementIndex in myArray) {
+    document.write(myArray(elementIndex));
+}
+'''
+
+###do-while loop
+Used when you want the code to run at least once before the loop
+'''
+var userAge;
+do {
+    userAge = prompt("Please enter your age!");
+} while (isNaN(userAge))==true;
+'''
+
+####Break and Continue
+You can use break inside a loop to stop the iteration
+"continue" can be used break to inform the user. but still run!
+
+
+
+
+
+
+
+
+
+
+
+
+
