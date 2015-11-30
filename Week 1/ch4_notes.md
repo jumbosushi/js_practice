@@ -5,7 +5,9 @@
 - = instead of ==
 - () for method or property
     You need () for methods but not property of an object!
+
     '''
+
     var test = "This is a test"
 
     //Good
@@ -17,20 +19,26 @@
     //Good
     var nowDate = new Date();
     alery(nowDate.getMonth());
+
     '''
+
 
     *Use () when you want to execute the function. Leave () when passing function to another function or property*
 
 ###Try...catch Statements
 They go together. try runs the code, can catch catches any exceptions thrown from the try
+
 '''
+
 try {
     // some code
 }
 catch (exception) {
 
 }
+
 '''
+
 
 Whatever error thrown in try will be under Error type, and they are stored as "exception" in catch parameters!
 
@@ -42,6 +50,9 @@ All major browsers suppoer *name* and *message* properties.
 Javascript checks for syntax error before running the code, so the code won't run if there's one.
 
 Throw is another debugging tool
+
 '''
+
 throw "This is the format";
+
 '''
