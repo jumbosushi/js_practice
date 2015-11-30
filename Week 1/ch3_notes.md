@@ -84,9 +84,15 @@ do {
 } while (isNaN(userAge))==true;
 '''
 
+It's important to note that the use of global variable should be minimized. As much as they are useful, it would be too difficult to debug them as they could have been changed anywhere in the code.
+
+Variables have a life time. Global variables last till the program ends, but local variables are deleted to free memory when the function has finished running. Cool eh.
+
 ####Break and Continue
 You can use break inside a loop to stop the iteration
 "continue" can be used break to inform the user. but still run!
+
+
 
 
 
