@@ -23,7 +23,7 @@ f Form feed
 
 '''
 
-var string1 = "Hello";
+    var string1 = "Hello";
     var string2 = "Goodbye";
 
     alert(string1);
@@ -53,12 +53,12 @@ Check this out
 
 '''
 
-var mynumber = 1;
-var myVar;      //undefined
+    var mynumber = 1;
+    var myVar;      //undefined
 
-//Does the same thing!
-mynumber++
-++mynumber
+    //Does the same thing!
+    mynumber++
+    ++mynumber
 
 '''
 
@@ -69,12 +69,12 @@ In this example,
 
 '''
 
-mynumber = 1;
-// Ex 1
-myVar = (myNumber++ * 10 + 1);
+    mynumber = 1;
+    // Ex 1
+    myVar = (myNumber++ * 10 + 1);
 
-//Ex2
-myvar = (++mynumber * 10 + 1)
+    //Ex2
+    myvar = (++mynumber * 10 + 1)
 
 '''
 
@@ -98,16 +98,19 @@ If unknown is in the way, funtion returns what is has parsed thus far.
 
 ###Arrays
 
+
 '''
 
-var myArray = new Array()
-// makes a new Array eh
 
-var mahArray = Array("eh", "hi", "byr", "that's a typo", "eh")
+    var myArray = new Array()
+    // makes a new Array eh
 
-var mahArray = new Array();
-mahArray[0] = "eh";
-mahArray[1] = "hi"; // an so on...
+    var mahArray = Array("eh", "hi", "byr", "that's a typo", "eh")
+
+    var mahArray = new Array();
+    mahArray[0] = "eh";
+    mahArray[1] = "hi"; // an so on...
+
 
 '''
 
