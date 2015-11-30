@@ -7,7 +7,7 @@ if statement could be written without {}
 BUT keep in mind that *only thefist line after will be executed without {}*
 Check this out:
 
-'''
+```
 
 // Good
 if (name = "Atsushi) {
@@ -24,7 +24,7 @@ if (!name = "Bob")
     name = "Atsushi";
     console.log("Come on");
 
-'''
+```
 
 
 ###Switch Statement
@@ -35,7 +35,7 @@ switch is made of 4 parts
 - The default statment
 
 
-'''
+```
 
 switch (myName)
 {
@@ -62,25 +62,24 @@ default:
     break;
 }
 
-'''
+```
 
 
 ###for-Loop
 
-'''
-
+```
 for (loopCOunter=1;loopCounter<=3;loopCounter++)
 {
     execute this code;
 }
 
-'''
+```
 
 
 ###for-in-loop (for-each)
 ex
 
-'''
+```
 
 // iterate through all elements in myArray
 var elementindex;
@@ -88,20 +87,20 @@ for (elementIndex in myArray) {
     document.write(myArray(elementIndex));
 }
 
-'''
+```
 
 
 ###do-while loop
 Used when you want the code to run at least once before the loop
 
-'''
+```
 
 var userAge;
 do {
     userAge = prompt("Please enter your age!");
 } while (isNaN(userAge))==true;
 
-'''
+```
 
 
 It's important to note that the use of global variable should be minimized. As much as they are useful, it would be too difficult to debug them as they could have been changed anywhere in the code.
