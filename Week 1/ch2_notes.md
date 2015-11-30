@@ -21,7 +21,6 @@ f Form feed
 
 ###Variables
 
-'''
 
     var string1 = "Hello";
     var string2 = "Goodbye";
@@ -39,7 +38,7 @@ f Form feed
     console.log(string1);
     console.log(string2);
 
-'''
+
 
 This is an interesting case!
 When the last console.log is called on string2, it will print out "Hello"
@@ -51,8 +50,6 @@ This is because when string1 is assigned to string2, the string is *copied rathe
 ###Increments ++ and -- increase or decrease the number by ones!
 Check this out
 
-'''
-
     var mynumber = 1;
     var myVar;      //undefined
 
@@ -60,14 +57,11 @@ Check this out
     mynumber++
     ++mynumber
 
-'''
 
 
 But like, which one should I use
 
 In this example,
-
-'''
 
     mynumber = 1;
     // Ex 1
@@ -76,7 +70,6 @@ In this example,
     //Ex2
     myvar = (++mynumber * 10 + 1)
 
-'''
 
 In Ex1 the calculation is: 1 * 10 + 1 + 1== 12
 *at-the-end ++ add 1 after operations!*
@@ -99,9 +92,7 @@ If unknown is in the way, funtion returns what is has parsed thus far.
 ###Arrays
 
 
-'''
-
-
+```
     var myArray = new Array()
     // makes a new Array eh
 
@@ -110,8 +101,5 @@ If unknown is in the way, funtion returns what is has parsed thus far.
     var mahArray = new Array();
     mahArray[0] = "eh";
     mahArray[1] = "hi"; // an so on...
-
-
-'''
-
+```
 
