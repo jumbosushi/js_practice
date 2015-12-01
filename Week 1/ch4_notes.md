@@ -86,3 +86,4 @@ First of all, its pretty awesome.
 
 Break points tab shows all the present breakpoints
 Watches tracks the current state of all variables that you specified
+Call Stacks removes items as function steps out

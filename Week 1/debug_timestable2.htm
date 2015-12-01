@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Debug: Time Table 2</title>
+
+    <script type="text/javascript">
+        function writeTimesTable(timeTable) {
+            var counter;
+            var writeString;
+            for (counter=1; counter<12; counter++) {
+                writeString = counter + " * " + timeTable + " = ";
+                writeString = writeString + (timeTable * counter);
+                writeString = writeString + "<br />";
+                document.write(writeString);
+            }
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        var timesTable;
+        for (timesTable=1; timesTable<=12; timesTable++) {
+            document.write("<p>")
+            writeTimesTable(timesTable);
+            document.write("</p>")
+        }
+
+    </script>
+</body>
+</html>
