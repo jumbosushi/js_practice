@@ -80,3 +80,9 @@ Modern debuggers have following features:
     1. "Step Into" execute the next line of code. If the next line is a function, it stops at the first line
     2. "Step OVer" execute the next line of code. If the line is a function it executes *the entire function* and stops at the first line after the function
     3. "Step Out" returns to the calling function when you'Re inside a called function. It resumes the execution of code till it finishes.
+
+###Firefox Firebug
+First of all, its pretty awesome.
+
+Break points tab shows all the present breakpoints
+Watches tracks the current state of all variables that you specified
