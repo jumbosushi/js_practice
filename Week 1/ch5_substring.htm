@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Chapter 5: Example</title>
+</head>
+<body>
+<script>
+    var myString = "Welcome to Wrox Books. ";
+    myString = myString + "The Wrox website is www.wrox.com. ";
+    myString = myString + "Visit the Wrox website today. Thanks for buying Wrox"
+
+    var foundAtPosition = 0;
+    var wroxCount = 0;
+
+    while (foundAtPosition != -1) {
+        foundAtPosition = myString.indexOf("Wrox", foundAtPosition);
+        if (foundAtPosition != -1) {
+            wroxCount++;
+            foundAtPosition++;
+        }
+    }
+
+    document.write("There are " + wroxCount + " occurences of the word Wrox.")
+</script>
+</body>
+</html>
