@@ -2,6 +2,47 @@
 
 <body>
     <script type="text/javascript">
+        // Cinema Type
+        function Cinema() {
+            this.bookings = new Array();
+        }
+
+        Cinema.prototype.addBooking = function (bookingID, customerName, film, showDate) {
+            this.bookings[bookingID] = (new CustomerBooking(bookingID,customerName,film,showDate));
+        }
+
+        Cinema.prototype.addCustomerBooking = function(cBooking) {
+            this.bookings[cBooking.getBookingId] = cBooking;
+        }
+
+        Cinema.prototype.getBookingTable = function() {
+            var booking;
+            var bookingsTableHTML = "<table border=1>";
+
+            for (booking in this.bookings) {
+                bookingsTableHTML += "<tr><td>";
+                bookingsTableHTML += this.bookings[booking].getBookingId();
+                bookingsTableHTML += "</td>";
+
+                bookingsTableHTML += "<td>";
+                bookingsTableHTML += this.bookings[booking].getCustomerName();
+                bookingsTableHTML += "</td>";
+
+                bookingsTableHTML += "<td>";
+                bookingsTableHTML += this.bookings[booking].getFilm();
+                bookingsTableHTML += "</td>";
+
+                bookingsTableHTML += "<td>";
+                bookingsTableHTML += this.bookings[booking].getShowDate();
+                bookingsTableHTML += "</td>";
+                bookingsTableHTML += "</tr>";
+            }
+
+            bookingsTableHTML += "</table>";
+            return bookingsTableHTML;
+        }
+
+
         // CustomerBooking type
         function CustomerBooking(bookingId, customerName, film, showDate) {
             this.customerName = customerName;
@@ -19,35 +60,42 @@
             this.customerName = customerName;
         };
 
-        CustomerBooking.prototype.getBookingId = function() {
+        CustomerBooking.prototype.getBookingId = function () {
             return this.bookingID;
         };
 
-        CustomerBooking.prototype.setBookingId = function(bookingId) {
+        CustomerBooking.prototype.setBookingId = function (bookingId) {
             this.bookingID = bookingId;
         };
 
-        CustomerBooking.prototype.getFilm = function() {
+        CustomerBooking.prototype.getFilm = function () {
             return this.film;
         };
 
-        CustomerBooking.prototype.setFilm = function(film) {
+        CustomerBooking.prototype.setFilm = function (film) {
             this.film = film;
         };
 
-        CustomerBooking.prototype.getShowDate = function() {
+        CustomerBooking.prototype.getShowDate = function () {
             return this.showDate;
         };
 
-        CustomerBooking.prototype.setShowDate = function(showDate) {
+        CustomerBooking.prototype.setShowDate = function (showDate) {
             this.showDate = showDate;
         };
 
-        var firstBooking = new CustomerBooking("0001", "Atsushi Yamamoto", "Taken", "31 Jan 2016 18:20");
-        var secondBooking = new CustomerBooking("0002", "Kobe Bryant", "Transformers", "21 Jan 2016 09:50");
 
-        document.write("1st booking persons name is " + firstBooking.getCustomerName() + "<br />");
-        document.write("2nd booking person's name is " + secondBooking.getCustomerName());
+        var londonOdeon = new Cinema();
+
+        var firstBooking = new CustomerBooking(1112, "Atsushi Yamamoto", "Taken", "31 Jan 2016 18:20");
+        var secondBooking = new CustomerBooking(00002, "Kobe Bryant", "Transformers", "21 Jan 2016 09:50");
+
+        londonOdeon.addCustomerBooking(firstBooking);
+        londonOdeon.addCustomerBooking(secondBooking);
+        londonOdeon.addBooking(00003, "Lebron James", "Toy Story 3", "11 Jan 2016 11:40")
+        londonOdeon.addBooking(324, "Beci Smith","Shrek", "29 July 2009 20:15");
+
+        document.write(londonOdeon.getBookingTable());
     </script>
 </body>
 
