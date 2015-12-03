@@ -102,4 +102,60 @@ var theDate4 = new Date("Jan 31 2010")
 .getFullYear()
 .toDateString()
 
+.setDate()     date of the month is param
+*If you set the day as 32, it will auto move to the next month*
+.setMonth()
+.setFulYear()
+
+.getHours()
+.getMinutes()
+.getSeconds()
+.getMilliseconds()
+.toTimeString()
+
+.setHours()
+.setMinues()
+.setSeconds()
+.setMilliseconds()
+
+
+
+###Building your own Class
+*In javascript, Class == Reference Type*
+All reference types have three things:
+- Constructor
+- Method Definitions
+- Properties
+
+Ex. Cinema Reference Type
+```
+function CustomerBooking (bookingId, customerName, film, showDate) {
+    this.customername = customerName;
+    this.bookingID = bookingId;
+    this.showDate = showDate;
+    this.film = film;
+}
+// this refers to the object being made
+
+
+CustomerBooking.prototype.getCustomerName = function()
+{
+return this.customerName;
+}
+
+CustomerBooking.prototype.setCustomerName = function(customerName) {
+    this.customerName = customerName;
+};
+
+```
+
+Whenever you want to make a method for your reference type (class method in java), you have this template of "prototype":
+```
+typeName.prototype.methodName = function(method parameter list) {
+// method code
+}
+```
+
+
+
 

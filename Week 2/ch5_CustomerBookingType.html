@@ -1,0 +1,54 @@
+<html>
+
+<body>
+    <script type="text/javascript">
+        // CustomerBooking type
+        function CustomerBooking(bookingId, customerName, film, showDate) {
+            this.customerName = customerName;
+            this.bookingID = bookingId;
+            this.showDate = showDate;
+            this.film = film;
+        }
+
+        //Getters and Setters
+        CustomerBooking.prototype.getCustomerName = function () {
+            return this.customerName;
+        };
+
+        CustomerBooking.prototype.setCustomerName = function (customerName) {
+            this.customerName = customerName;
+        };
+
+        CustomerBooking.prototype.getBookingId = function() {
+            return this.bookingID;
+        };
+
+        CustomerBooking.prototype.setBookingId = function(bookingId) {
+            this.bookingID = bookingId;
+        };
+
+        CustomerBooking.prototype.getFilm = function() {
+            return this.film;
+        };
+
+        CustomerBooking.prototype.setFilm = function(film) {
+            this.film = film;
+        };
+
+        CustomerBooking.prototype.getShowDate = function() {
+            return this.showDate;
+        };
+
+        CustomerBooking.prototype.setShowDate = function(showDate) {
+            this.showDate = showDate;
+        };
+
+        var firstBooking = new CustomerBooking("0001", "Atsushi Yamamoto", "Taken", "31 Jan 2016 18:20");
+        var secondBooking = new CustomerBooking("0002", "Kobe Bryant", "Transformers", "21 Jan 2016 09:50");
+
+        document.write("1st booking persons name is " + firstBooking.getCustomerName() + "<br />");
+        document.write("2nd booking person's name is " + secondBooking.getCustomerName());
+    </script>
+</body>
+
+</html>
