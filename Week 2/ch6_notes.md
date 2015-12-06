@@ -48,5 +48,14 @@ console.log(window.thisTest);
 - screen object contains info about the display capbilities
 - location object is info about where in the page the user is
 
+###History object
+List of pages visited is called history stack
 
+history object has a length property
+as well as back() and forward()
+
+go() is a method that you can specify how far back you wish to go!
+
+```
+history.go(-2) // go back two pages
 
