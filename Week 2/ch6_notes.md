@@ -145,3 +145,21 @@ Event handler for window object goes inside "body" tag!
 ```
 
 ####2. Handle Events w/ Object Properties
+```
+<body>
+<script type="text/javascript">
+    function linkSomePage_onlick() {
+        alert('This link is going nowhere!');
+        return false;
+    }
+</script>
+<a href="somepage.htm" name="linkSomePage">
+    Click ME!
+</a>
+<script type="text/javascript">
+    window.document.links[0].onclick = linkSomePage_onlick;
+</script>
+</body>
+```
+*the object's onclick property is set to the function!*
+
