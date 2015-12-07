@@ -92,4 +92,56 @@ The first image on the page is accessed by document.images[0]
 for (var i = 0; i < document.images.length -1; i++) {
     document.images[i].src = "http://funnystack.com/wp-content/uploads/2015/07/Funny-Baby-56.jpg";
 }
-//
+// #awesomeeee
+```
+
+###Responding to the User actions and events
+*WHATE ARE EVENTS THO*
+
+Events => when something happens #wowsohelpful
+But how so we know when to execute a function?
+
+=> We use *event handler* or *listerner* to do just that
+
+Listerners are associated with the code that should be executed when event happens
+
+native js objects have none, but BOM / DOM have primitive events & event listerners!
+
+Listners always start with "on"
+ex. onclick(), onload() etc...
+
+We'll cover two ways:
+
+####1. Handle events w/ HTML Attributes
+
+```
+//when it's simple
+<a href="somepage.htm" name="linkSomePage" onclick="alert('You clicked?')">
+        Click Me!
+</a>
+
+//when it's complicated
+<script>
+    function linkSomePage_onclick() {
+        alert('Sup Homie');
+        return true;
+    }
+</script>
+<a href="somepage.htm" name="linkSomePage" onclick="return linkSomePage_onclick()">
+        Click Me!
+</a>
+```
+
+if the event function returns true, the click will jump the page to the href defined
+
+if the event function retruns false, the proceeding actions stop
+
+*Each browser & option have different ways to terminate actions, so always try "true" first*
+
+
+Event handler for window object goes inside "body" tag!
+```
+<body onload="myonLoadfunction()"></body>
+```
+
+####2. Handle Events w/ Object Properties
