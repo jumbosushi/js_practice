@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Strict//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Chapter 6: Example 5</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    var browser = "Unknown";
+    var version = "0";
+
+    if (window.opera) {
+        browser = "Opera";
+        version = "5+";
+
+        if (window.opera.setPreference) {
+            varsion = "9";
+        }
+    }
+    else if (document.all) {
+        browser = "IE";
+        version = "6-";
+
+        if (window.XMLHttpRequest) {
+            varsion = "7+";
+        }
+    }
+    else if (window.sidebar) {
+        browser = "Firefox";
+        version = "1+";
+    }
+
+    document.write(browser + " " + varsion);
+</script>
+
+</body>
+</html>

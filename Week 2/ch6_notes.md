@@ -163,3 +163,41 @@ Event handler for window object goes inside "body" tag!
 ```
 *the object's onclick property is set to the function!*
 
+
+###Determining the User Browser
+You can check whether certain functions are supported by the browser by runnign simple tests
+```
+if (document.getElementById)
+    {
+    // code using document.getElementById()
+}
+else
+    {
+    // code for browsers that do not have that method
+}
+```
+
+###No scripe
+Some people turn off Javascript :banana:
+
+You can use <noscript> - shows text when js is turned off
+```
+<body>
+<noscript>
+This website requires JavaScript to be enabled.
+</noscript>
+</body>
+```
+
+
+###Other ways
+Anotehr way is to user navigator object and user userAgent property and appName property
+```
+// for my chrome
+nagigator.userAgent()
+// returns "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36"
+```
+
+*This approach has couple issues!*
+1. The browser might change their userAgent format in the future
+2. Some minor browser uses the same userAgent string format when it doesn't use 100% of the said browser's properties
