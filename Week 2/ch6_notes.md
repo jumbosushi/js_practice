@@ -59,3 +59,37 @@ go() is a method that you can specify how far back you wish to go!
 ```
 history.go(-2) // go back two pages
 
+
+###location object
+User can access:
+- url
+- server hosting
+- port number of the server connection
+- protocol used
+
+You can use location object to change the page as well!
+
+```
+window.location.replace("https://8tracks.com/");
+window.location.href = "https://8tracks.com/";
+// same thing!
+```
+
+
+###navigator object
+aka browser object
+
+###document object
+This is where the browsers have many differences
+
+####images collection
+ALL images in the page are stored in images collection!
+
+The first image on the page is accessed by document.images[0]
+
+```
+//change all images to baby pictures
+for (var i = 0; i < document.images.length -1; i++) {
+    document.images[i].src = "http://funnystack.com/wp-content/uploads/2015/07/Funny-Baby-56.jpg";
+}
+//
