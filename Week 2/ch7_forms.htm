@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Chapter 7; Example 1</title>
+    <script type="text/javascript">
+    function window_onload() {
+        var numberForms = document.forms.length;
+        var formIndex;
+        for (formIndex = 0; formIndex < numberForms; formIndex++) {
+            alert(document.forms[formIndex].name)
+        }
+    }
+    </script>
+</head>
+<body onload="window_onload()">
+   <form action="" name="form1">
+      <p>This is inside form1</p>
+   </form>
+   <form action="" name="form2">
+       <p>This is inside form2</p>
+   </form>
+   <form action="" name="form3">
+       <p>This is inside for m3</p>
+   </form>
+</body>
+</html>
