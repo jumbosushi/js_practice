@@ -65,4 +65,27 @@ There are also submit button and reset button!
 ```
 
 ###Text Elements
+Cool methods/attr/eventhandlers!
 
+-.slect() => select the value inside the textbox!
+-onselect =>when user select the text
+-onkeypress
+-onkeydown
+-onkeyup
+-onchange => fires when the element losed focus && the value is diff from when it was focused
+-**readonly** => prevent content from being changed!
+
+useful attr:
+- size => well its for size
+- maxlength => limit the chrs user can type!
+
+The password textbox is only for looks. The data is actually sent as a plain text
+```
+<input name="password1" type="password" />
+```
+
+####Hidden Text box
+```
+<input type="hidden" name="myHidden" />
+```
+Can be used to stored data hidden from the user!

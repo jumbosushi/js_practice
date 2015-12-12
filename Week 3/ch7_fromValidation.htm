@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Chapter 7: Example 4</title>
+    <script type="text/javascript">
+        function btnCheckForm_onclick() {
+            var myForm = document.form1;
+            if (myForm.txtAge.value == "" || myForm.txtName.value == "") {
+                alert("Please complete all the form");
+                if (myForm.txtName.value == "") {
+                    myForm.txtName.focus();
+                } else {
+                    myForm.txtAge.focus();
+                }
+            } else {
+                alert("Thanks for completing the form " + myForm.txtName.value);
+            }
+        }
+
+        function txtAge_onblur() {
+            var txtAge = document.form1.txtAge;
+            if (isNaN(txtAge.value)) {
+                alert("Please enter a valid age");
+                txtAge.focus();
+                txtAge.select();
+                //me like this combo
+            }
+        }
+
+        function txtName_onchange() {
+            window.status = "Hi " + document.form1.txtName.value;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" name="form1">
+        <p>
+            Name:
+            <br/>
+            <input type="text" name="txtName" onchange="txtName_onchange()" />
+        </p>
+        <p>
+            Age:
+            <br/>
+            <input type="text" name="txtAge" onchange="txtAge_onblur()" size="3" maxlength="3" />
+        </p>
+        <p>
+            <input type="button" value="Check Details" name="btnCheckForm" onclick="btnCheckForm_onclick()" />
+        </p>
+
+    </form>
+</body>
+
+</html>
