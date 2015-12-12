@@ -48,3 +48,4 @@ Each form elements inside a webpage is stored as an object
     (ex. onblur() is useful to check if the data entered is valid. If not, we can put the focus back())
 
 ###Button Elements!
+<input type = "button" name="myButton" value="Click Me" />
