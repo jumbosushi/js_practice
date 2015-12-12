@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Chapter 7: Eample 2</title>
+    <script type="text/javascript">
+    var numberOfClicks = 0;
+        function myButton_onclick() {
+            numberOfClicks++;
+            document.form1.myButton.value = "Button Clicked " + numberOfClicks + " times";
+        }
+
+        function myButton2_onmouseup() {
+            document.form1.myButton2.value = "Mouse Goes up";
+        }
+
+        function myButton2_onmousedown() {
+            document.form1.myButton2.value = "Mouse Goes down";
+        }
+
+    </script>
+</head>
+<body>
+    <form action="" name="form1">
+        <input type="button" name="myButton" value="Button Clicked 0 times" onclick="myButton_onclick()" />
+        <input type="button" name="myButton2" value="Mouse Goes up" onmouseup="myButton2_onmouseup()" onmousedown="myButton2_onmousedown()" />
+    </form>
+</body>
+</html>

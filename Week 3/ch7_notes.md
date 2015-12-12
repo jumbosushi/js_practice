@@ -48,4 +48,21 @@ Each form elements inside a webpage is stored as an object
     (ex. onblur() is useful to check if the data entered is valid. If not, we can put the focus back())
 
 ###Button Elements!
+```
 <input type = "button" name="myButton" value="Click Me" />
+```
+Value attr of the button is the text you want on the button!
+
+You can add a event hadnler with onclick as usual
+
+There are also submit button and reset button!
+```
+<input type="submit" value="Submit" name="submit1" />
+//Automatically send the form data to the server!
+
+<input type="reset" value="Reset" name="reset1" />
+//All elements are cleared in tthe form and returned to default val
+```
+
+###Text Elements
+
