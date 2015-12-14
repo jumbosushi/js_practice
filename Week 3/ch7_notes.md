@@ -118,5 +118,27 @@ Have these event handlers similar to text:
 
 
 
+###Checkboxes and Radio
+Radio is checkboxes that only one can be checked
+They are both types of <input>
+**setting attr checked's value to "checked" will set it checked!**
+
+```
+<input type="checkbox" name="myBox1" checked="checked" value="YES">
+<input type="radio" name="myRadioo" checked="checked" value="Maybe...">
+
+//#thisishowtheysentyouthosejunkmailsugh
+```
+Both are stored in their respective objects
+**Can check the status of a box by using checked method!**
+=> will return true is checked
+
+THey have:
+- onclick
+- onfocus
+- onblur //whatwut
+
+
+
 
 

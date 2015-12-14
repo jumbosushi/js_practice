@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Chapter 7: Example 6</title>
+    <script type="text/javascript">
+        var radCPUSpeedIndex = 0;
+
+        function radCPUSpeed_onclick(radIndex) {
+            var returnValue = true;
+            if (radIndex == 1) {
+                retunrValue = false;
+                alert("Sorry bruh that processor speed is currently unavailable");
+                // Next line is just for IE
+                document.form1.radCPUSpeed[radCPUSpeedIndex].checked = true;
+            } else {
+                radCPUSpeedIndex = radIndex;
+            }
+            return returnValue;
+        }
+
+        function btnCheck_onclick() {
+            var controlIndex;
+            var element;
+            var numberOfControls = document.form1.length;
+            var compSpec = "Your chosen processor speed is ";
+
+            compSpec = compSpec + document.form1.radCPUSpeed[radCPUSpeedIndex].value;
+            compSpec = compSpec + "\nWith the followin addiotional components\n";
+
+            for (controlIndex = 0; controlIndex < numberOfControls; controlIndex++) {
+                element = document.form1[controlIndex];
+                if (element.type == "checkbox") {
+                    if (element.checked == true) {
+                        compSpec = compSpec + element.value + "\n";
+                    }
+                }
+            }
+            alert(compSpec);
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" name="form1">
+        <p>Tick all the components you want in your computer</p>
+        <table>
+            <tr>
+                <td>DVD-ROM</td>
+                <td>
+                    <input type="checkbox" name="chkDVD" value="DVD-ROM" />
+                </td>
+            </tr>
+            <tr>
+                <td>CD-ROM</td>
+                <td>
+                    <input type="checkbox" name="chkCD" value="CD-ROM" />
+                </td>
+            </tr>
+            <tr>
+                <td>Zip Drive</td>
+                <td>
+                    <input type="checkbox" name="chkZip" value="Zip Drive" />
+                </td>
+            </tr>
+        </table>
+        <p>Select the processor speed you require</p>
+        <table>
+            <tr>
+                <td>
+                    <input type="radio" name="radCPUSpeed" checked="checked" value="3.8 GHz" onclick="return radCPUSpeed_onclick(0)" />
+                </td>
+                <td>3.8 Ghz</td>
+                <td>
+                    <input type="radio" name="radCPUSpeed" value="4.8 GHz" onclick="return radCPUSpeed_onclick(1)">
+                </td>
+                <td>4.8 GHz</td>
+                <td>
+                    <input type="radio" name="radCPUSpeed" value="6 GHz" onclick="return radCPUSpeed_onclick(2)">
+                </td>
+                <td>6 GHz</td>
+            </tr>
+        </table>
+        <input type="button" value="Check Form" name="btnCheck" onclick="return btnCheck_onclick()" />
+    </form>
+</body>
+
+</html>
