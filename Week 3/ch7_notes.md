@@ -31,6 +31,7 @@ There is also .reset() in which clears the form & restore inital values
 
 ###HTML Elements in forms!
 Each form elements inside a webpage is stored as an object
+**Everything in form tag is included in document.forms object!**
 
 ####Common properties& Methods of form elements!
 1. *name* property
@@ -89,3 +90,33 @@ The password textbox is only for looks. The data is actually sent as a plain tex
 <input type="hidden" name="myHidden" />
 ```
 Can be used to stored data hidden from the user!
+
+
+###textarea Element
+Textarea is multi-line input of text
+
+Have cols and rows.
+Cols = How many ch wide the text area will be
+Rows = how many rows
+
+```
+<textarea name="myTextArea" cols="40" rows="20">
+    Hello Wolrd
+</textarea>
+```
+
+Another attr is "wrap" aka what happens when the user goes out of the box
+The deafult wrap is "soft"
+=> **the text will be automatically returned, but the return won't be sent to the server!**
+"Hard settign WILL send the return to server!
+
+Have these event handlers similar to text:
+- onkeydown
+- onkeypress
+- onkeyup
+- onchange
+
+
+
+
+

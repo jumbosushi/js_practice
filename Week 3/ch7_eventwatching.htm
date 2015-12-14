@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Chapter 7: Example 5</title>
+    <script type="text/javascript">
+        function DisplayEvent(eventName) {
+            var myMessage = window.document.form1.textarea2.value;
+            myMessage = myMessage + eventName;
+            document.form1.textarea2.value = myMessage;
+        }
+
+        function clearTextArea() {
+            document.form1.textarea2.value = "";
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" name="form1">
+        <textarea name="textarea1" id="" cols="40" rows="15" onchange="DisplayEvent('onchange\n');" onkeydown="DisplayEvent('onkeydown\n');" onkeypress="DisplayEvent('onkeypress\n');" onkeyup="DisplayEvent('onkeyup\n\n');"></textarea>
+
+        <textarea name="textarea2" id="" cols="40" rows="15"></textarea>
+        <br />
+        <br />
+        <input type="button" value="Clear Event TextArea" name="button1" onclick="clearTextArea()" />
+    </form>
+</body>
+
+</html>
