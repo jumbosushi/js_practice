@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Chapter 7: Example 7</title>
+    <script type="text/javascript">
+    function btnRemoveWed_onclick() {
+        if (document.form1.theDay.options[2].text == "Wednesday") {
+            document.form1.theDay.options[2] = null;
+        }
+        else {
+            alert("There is no Wednesday here!")
+        }
+    }
+    function btnAddWed_onclick() {
+        if (document.form1.theDay.options[2].text != "Wednesday") {
+            var indexCounter;
+            var days = document.form1.theDay
+            var lastoption = new Option();
+            days.options[days.options.length] = lastoption;
+            for (indexCounter = days.options.length - 1; indexCounter > 2; indexCounter--) {
+                days.options[indexCounter].text = days.options[indexCounter -1].text;
+                days.options[indexCounter].value = days.options[indexCounter -1].value;
+            }
+            var option = new Option("Wednesday", 2);
+            days.options[2] = option;
+        }
+        else {
+            alert("Do you want to have TWO Wenesdays??? BRUH")
+        }
+    }
+
+    </script>
+</head>
+<body>
+    <form action="" name="form1">
+        <select name="theDay" size="10">
+            <option value="0" selected="selected">Monday</option>
+            <option value="1">Tuesday</option>
+            <option value="2">Wednesday</option>
+            <option value="3">Thursday</option>
+            <option value="4">Friday</option>
+            <option value="5">Saturday</option>
+            <option value="6">Sunday</option>
+        </select>
+        <br />
+        <input type="button" value="Remove Wednesday" name="btnRemoveWed" onclick="btnRemoveWed_onclick()">
+        <input type="button" value="Add Wednesday" name="btnAddWed" onmousedown="btnAddWed_onclick()">
+        <br />
+    </form>
+</body>
+
+</html>

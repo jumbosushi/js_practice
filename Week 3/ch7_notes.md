@@ -139,6 +139,45 @@ THey have:
 - onblur //whatwut
 
 
+###Selection Boxes
+<select> is used for both drop-down list and list boxes!!
+**size attr is set to define how many options the user can see!**
+**To turn the list into a drop-down, the only thing you have to do is to chane the size to 1!!**
+
+```
+<select name=”theDay” size=”5”>
+    <option value=”0” selected=”selected”>Monday</option>
+    <option value=”1”>Tuesday</option>
+    <option value=”2”>Wednesday</option>
+    <option value=”3”>Thursday</option>
+    <option value=”4”>Friday</option>
+    <option value=”5”>Saturday</option>
+    <option value=”6”>Sunday</option>
+</select>
+
+document.theForm.theDay.options[0]
+//would access the first option!
+```
+
+-adding "multiple" attr to select allows the user to choose more than one option!
+-select element is stored in Select element, and it has "
+- selectedIndex property returns the index of selected
+- option object has index, text, and value properties
+
+####Ading and Removing Options
+```
+var myNewOption = new Option("TheText", "TheValue");
+
+document.theForm.theSelectedObject.options[0] = myNewOption;
+// Assign new option
+
+document.theForm.theSelectObject.options[0] = null
+//remove the option
+```
+
+
+
+
 
 
 
