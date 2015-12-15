@@ -175,7 +175,24 @@ document.theForm.theSelectObject.options[0] = null
 //remove the option
 ```
 
+####Adding New Options with Standard Method
+Turns out there's built-in add & remove for us (wut)
+```
+var theoldone = document.form1.theDays.option[3]
+add(new Option("TheNew", "OptionYouwannaAdd"), theoldone);
+//The second option varies by browsers, but for major ones it the above
+//Note: 2nd param as null will auto add new one to the end of list
 
+var indexOfOptionYouwannaRemove = 0;
+remove(indexOfOptionYouwannaRemove)
+
+```
+
+
+Select elements have:
+-onblur
+-onfocus
+-onchange **In select, onchange is when the selected is changed!**
 
 
 

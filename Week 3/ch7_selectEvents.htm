@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Chapter 7: Example 8</title>
+    <script type="text/javascript">
+        function writeOptions(startNum, endNum) {
+            var optionCounter;
+            for (optionCounter = startNum; optionCounter <= endNum; optionCounter++) {
+                document.write("<option value=" + optionCounter + ">" + optionCounter);
+            }
+        }
+
+        function writeMonthOptions() {
+            var theMonth;
+            var monthCounter;
+            var theDate = new Date();
+            for (monthCounter = 0; monthCounter < 12; monthCounter++) {
+                theDate.setMonth(monthCounter);
+                theMonth = theDate.toString();
+                theMonth = theMonth.substr(4,3);
+                document.write("<option value=" + theMonth + ">" + theMonth);
+            }
+        }
+
+
+
+        function recalcDateDiff() {
+            var myForm = document.form1;
+            var firstDay= myForm.firstDay.options[myForm.firstDay.selectedIndex].value;
+            var secondDay= myForm.secondDay.options[myForm.secondDay.selectedIndex].value;
+            var firstMonth= myForm.firstMonth.options[myForm.firstMonth.selectedIndex].value;
+            var secondMonth= myForm.secondMonth.options[myForm.secondMonth.selectedIndex].value;
+            var firstYear= myForm.firstYear.options[myForm.firstYear.selectedIndex].value;
+            var secondYear= myForm.secondYear.options[myForm.secondYear.selectedIndex].value;
+            var firstDate = new Date(firstDay + " " + firstMonth + " " + firstYear);
+            var secondDate = new Date(secondDay + " " + secondMonth + " " + secondYear);
+            var daysdiff = (secondDate.valueOf() - firstDate.valueOf());
+
+            daysdiff = Math.floor(Math.abs((((daysdiff / 1000) /60) /60) /24));
+            myForm.txtDays.value = daysdiff;
+        }
+
+        function window_onload() {
+            var theForm = document.form1;
+            var nowDate = new Date();
+            theForm.firstDay.options[nowDate.getDate() - 1].selected = true;
+            theForm.secondDay.options[nowDate.getDate() - 1].selected = true;
+            theForm.firstMonth.options[nowDate.getMonth()].selected = true;
+            theForm.secondMonth.options[nowDate.getMonth()].selected = true;
+            theForm.firstYear.options[nowDate.getFullYear() - 1970].selected = true;
+            theForm.secondYear.options[nowDate.getFullYear() - 1970].selected = true;
+        }
+
+
+    </script>
+</head>
+<body onload="window_onload()">
+    <form action="" name="form1">
+        <p>
+            <br>
+            <select name="firstDay" onchange="recalcDateDiff()">
+                <script type="text/javascript">
+                writeOptions(1,31);
+                </script>
+            </select>
+            <select name="firstMonth" onchange="recalcDateDiff()">
+                <script type="text/javascript">
+                writeMonthOptions();
+                </script>
+            </select>
+            <select name="firstYear" id="" onchange="recalcDateDiff()">
+                <script type="text/javascript">
+                writeOptions(1970, 2020);
+                </script>
+            </select>
+        </p>
+        <p>
+            <br>
+            <select name="secondDay" id="" onchange="recalcDateDiff()">
+                <script type="text/javascript">
+                writeOptions(1,31);
+                </script>
+            </select>
+            <select name="secondMonth" id="" onchange="recalcDateDiff()">
+                <script type="text/javascript">
+                writeMonthOptions()
+                </script>
+            </select>
+            <select name="secondYear" id="" onchange="recalcDateDiff()">
+                <script type="text/javascript">
+                writeOptions(1970, 2020)
+                </script>
+            </select>
+        </p>
+        <p>
+            Total difference in days:
+            <input type="text" name="txtDays" value="0" readonly="readonly" />
+        </p>
+    </form>
+</body>
+</html>
