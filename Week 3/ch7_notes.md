@@ -140,8 +140,10 @@ THey have:
 
 
 ###Selection Boxes
-<select> is used for both drop-down list and list boxes!!
+selcect is used for both drop-down list and list boxes!!
+
 **size attr is set to define how many options the user can see!**
+
 **To turn the list into a drop-down, the only thing you have to do is to chane the size to 1!!**
 
 ```
@@ -159,8 +161,8 @@ document.theForm.theDay.options[0]
 //would access the first option!
 ```
 
--adding "multiple" attr to select allows the user to choose more than one option!
--select element is stored in Select element, and it has "
+- adding "multiple" attr to select allows the user to choose more than one option!
+- select element is stored in Select element, and it has "
 - selectedIndex property returns the index of selected
 - option object has index, text, and value properties
 
