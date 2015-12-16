@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Chapter 8: Example 3 D</title>
+    <script type="text/javascript">
+    function btnShowVisited_onclick() {
+        document.form1.txtAPagesVisited.value = window.top.returnPagesVisited();
+    }
+
+    function setFrameAndPageControls(linkIndex) {
+        var formObject = window.parent.parent.frameMenu.document.from1;
+        formObject.choosePage.selectedIndex = linkIndex;
+
+        if (window.parent.frameTop == window.self) {
+            formObject.radFrame[0].checked = true;
+        }
+        else {
+            frameObject.radFrame[1].checked = true;
+        }
+    }
+    </script>
+</head>
+<body onload="window.top.addPage(window.location.href)">
+    <h2>This is Page D</h2>
+    <p>
+        <a href="ch8_ex3_a.htm" name="pageALink" onclick="return setFrameAndPageControls(0)">Page A</a>
+        <a href="ch8_ex3_b.htm" name="pageBLink" onclick="return setFrameAndPageControls(1)">Page B</a>
+        <a href="ch8_ex3_c.htm" name="pageCLink" onclick="return setFrameAndPageControls(2)">Page C</a>
+        <a href="ch8_ex3_d.htm" name="pageDLink" onclick="return setFrameAndPageControls(3)">Page D</a>
+    </p>
+<form name="form1" action="">
+    <textarea name="txtAPagesVisited" cols="35" rows="10"></textarea>
+    <br />
+    <input type="button" value="List Pages Visited" name="btnShowVisited" onclick="btnShowVisited_onclick()" />
+</form>
+</body>
+</html>

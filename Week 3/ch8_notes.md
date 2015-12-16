@@ -56,3 +56,73 @@ As shown in ch8_pagesAsModule file example, no matter how much you travel inside
 the over-layering parent file keeps track of the variables
 
 Think of each frame as a page of its own, but inside another page #pageception
+
+
+###Code Aceess between frames
+We can even set the frames to be like this!
+
+```
+             +-------------------+
+             |  Top Window       |
+             +---------+---------+
+                       |
+        +--------------+------------+
++--------------+            +---------------+
+|  frameMenu   |            |  frameMain    |
++--------------+            +--------+------+
+                                     |
+                            +--------+--------------+
+                     +--------------+      +---------------+
+                     | frameTop     |      |  frameBottom  |
+                     +--------------+      +---------------+
+
+//(made with http://asciiflow.com/)
+```
+
+To acess Top Window from frameTop, you call with
+```
+window.parent.parent.functionName()
+```
+
+and to access frameMenu from frameTop, you use frame object of the Top Window!
+```
+//call it with a name
+window.parent.parent.frame[0]
+
+//or even call with names
+//waaaaa
+window.parent.parent.frame[*frameMenu*]
+
+//or with more straight-forwar
+window.parent.parent.frameMenu
+
+//and go further
+window.parent.parent.frameMenu.myFunction
+window.parent.parent.frameMenu.myVariable
+
+//it is often smart to save the reference in a var for simplicity
+var myFromRef = window.parent.parent.myForm;
+```
+
+####The top property
+The "top" property of a window object returns a window object of top frame!
+```
+window.parent.parent.frameMenu
+//becomes
+window.top.frameMenu
+//or just
+top.frameMenu
+```
+
+- top is useful when there's multiple frames involved
+- also, as long as top is fixed, adding another layer in the middle
+
+####Scripting iFrames
+ifram = Inline framing
+```
+<iframe name=”myIFrame” src=”child_frame.htm” />
+
+//when accesing this frame
+window.myIFrame.document.bgColor = “red”;
+
+```

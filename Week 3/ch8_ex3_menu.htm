@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Chapter 8: Example 3 Menu</title>
+    <script type="text/javascript">
+    function choosePage_onchange() {
+        var choosePage = document.form1.choosePage;
+        var windowobject;
+        if (document.form1.radFrame[0].checked == true) {
+            windowobject = window.parent.frameMain.frameTop;
+        }
+        else {
+            windowobject = window.parent.frameMain.frameBottom;
+        }
+        windowobject.location.href = choosePage.options[choosePage.selectedIndex].value;
+    }
+    </script>
+</head>
+<body>
+    <form action="" name="form1">
+        Select frame
+        <br>
+        Top
+        <input name="radFrame" checked="checked" type="radio">
+        Bottom
+        <input name="radFrame" type="radio">
+        <br>
+        <br>
+        <select name="choosePage" onchange="choosePage_onchange()">
+            <option value="ch8_ex3/ch8_ex3_a.htm">Page A</option>
+            <option value="ch8_ex3/ch8_ex3_b.htm">Page B</option>
+            <option value="ch8_ex3/ch8_ex3_c.htm">Page C</option>
+            <option value="ch8_ex3/ch8_ex3_d.htm">Page D</option>
+
+        </select>
+    </form>
+</body>
+
+</html>
