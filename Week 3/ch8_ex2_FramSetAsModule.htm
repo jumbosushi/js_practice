@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Frameset//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Chapter 8: Example 2</title>
+    <script type="text/javascript">
+        //Parent's functions not accessed in Chrome :((
+        var pagesVisited = new Array();
+        function returnPagesVisited() {
+            var returnValue = "So far you have been to following pages \n";
+            var pagesVisitedIndex;
+            var numberOfPagesVisited = pagesVisited.length;
+            for (pagesVisitedIndex=0; pagesVisitedIndex < numberOfPagesVisited; pagesVisitedIndex++) {
+                returnValue = returnValue + "- " pagesVisited[pagesVisitedIndex] + "\n";
+            }
+            return returnValue;
+        }
+
+        function addPage(fileName) {
+            var fileNameStart = fileName.lastIndexOF("/") + 1;
+            // cus file name is in format of file:///D:/myDirectory/ch08_examp2_b.htm
+            fileName = fileName.substr(fileNameStart);
+            pagesVisited[pagesVisited.length] = fileName;
+            return true;
+        }
+    </script>
+</head>
+<frameset cols="50%, *">
+    <frame name="fraLeft" src="ch8_ex2_a.htm" />
+    <frame name="fraRight" src="ch8_ex2_b.htm" />
+</frameset>
+</html>

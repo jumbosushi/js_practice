@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Chapter 8: Example 2 pgA</title>
+    <script type="text/javascript">
+    function btnShowVisited_onclick() {
+        document.form1.txtAPagesVisited.value = window.parent.returnPagesVisited();
+    }
+
+    </script>
+</head>
+<body onload="window.parent.addPage(window.location.href)">
+    <h2>This is a Page A</h2>
+    <p>
+        <a href="ch8_ex2_a.htm">Page A</a>
+        <a href="ch8_ex2_b.htm">Page B</a>
+        <a href="ch8_ex2_c.htm">Page C</a>
+        <a href="ch8_ex2_d.htm">Page D</a>
+    </p>
+<form name="form1" action="">
+    <textarea name="txtAPagesVisited" cols="35" rows="10"></textarea>
+    <br />
+    <input type="button" value="List Pages Visited" name="btnShowVisited" onclick="btnShowVisited_onclick()" />
+</form>
+</body>
+</html>

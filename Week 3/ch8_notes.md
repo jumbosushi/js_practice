@@ -46,3 +46,13 @@ window.parent let you access the window object of frame's parent. Which means...
 - Don't forget the document and all the other good stuff
 - Pretty awesome
 
+
+###Coding Between Frames
+```
+window.parent.fcnName();
+//Can access parent's function... in theory
+```
+As shown in ch8_pagesAsModule file example, no matter how much you travel inside the frame,
+the over-layering parent file keeps track of the variables
+
+Think of each frame as a page of its own, but inside another page #pageception
