@@ -125,4 +125,23 @@ ifram = Inline framing
 //when accesing this frame
 window.myIFrame.document.bgColor = “red”;
 
+//supa simplu eh
+```
+
+###Opening New Window
+
+window object has open() method
+*takes three params!*
+
+1. URL of the page (can be empty str for blank page)
+2. Name for the new window (**For <a href>'s "target" purpose!)
+3. (Optional) Widthe & Height
+
+```
+var newWindow = window.open("test.htm", "myWindow", "width=250, height=250")
+// This gives an acess to the window of the new window!
+
+newWindow.document.bgColor = "red";
+
+
 ```

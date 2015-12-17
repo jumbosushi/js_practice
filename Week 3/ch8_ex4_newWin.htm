@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Chapter 8: Ex 4</title>
+    <script type="text/javascript">
+        var detailsWindow;
+
+        function showDetails(bookURL) {
+            detailsWindow = window.open(bookURL, "bookDetails", "width=400, height=350");
+            //since we give all new windows the smae name, the new page will be updated within the existing new Window #mindBlown
+            detailsWindow.focus();
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Online Book Buyer</h2>
+    <p>
+        Click any of the images below for more detials
+    </p>
+    <h4>Professional Ajax</h4>
+    <p>
+        <img src="http://i.telegraph.co.uk/multimedia/archive/01528/cat8_1528095i.jpg" alt="Professional Ajax, 2nd Edition" border="0" onclick="showDetails('ch8_ex4/ch8_ex4_book1.htm')" />
+    </p>
+    <h4>Professional javascript for Web Developers</h4>
+    <p><img src="http://ak-hdl.buzzfed.com/static/2014-07/1/16/enhanced/webdr04/anigif_enhanced-24884-1404246321-82.gif" alt="Pro JS 2nd Edition" border="0" onclick="showDetails('ch8_ex4/ch8_ex4_book2.htm')" /></p>
+</body>
+
+</html>
