@@ -145,3 +145,30 @@ newWindow.document.bgColor = "red";
 
 
 ```
+
+
+####Adding new HTML to a new Window
+
+
+```
+var newWindow = window.open("", "myNewWindow", "width=150,height=150");
+//Creates new window!
+
+newWindow.document.open()
+//*OPEN the window you just defined in a new tab!*
+
+//and now you can write on it!
+newWindow.documet.write("YO IT WORKS SON");
+```
+
+**We've been using documet.write for a while, but you can close a writing session with close!**
+
+```
+newWindow.document.close();
+//clear what ever we wrote with .write
+```
+
+With the third param of open(), you can specify loads of things
+- "copyhistory=yes/no" -> copy history from current window
+- "directories=yes/no" -> show directory button
+
