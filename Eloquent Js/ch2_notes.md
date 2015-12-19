@@ -46,7 +46,7 @@ switch (prompt("What is the weather like?)) {
 */
 
 ###chapter exercise!
-1. Design a program that prints this:
+**Q1: Design a program that prints this:**
 ```
 #
 ##
@@ -65,7 +65,7 @@ for (var i=1; i<8; i++) {
 }
 ```
 
-2. FizzBuzz
+**Q2. FizzBuzz**
 "Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.
 
 When you have that working, modify your program to print "FizzBuzz", for numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz" for numbers divisible by only one of those)."
@@ -88,7 +88,7 @@ while (count <100) {
 };
 ```
 
-3. Chess Board
+**Q3. Chess Board**
 "Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a “#” character. The characters should form a chess board."
 
 ```
