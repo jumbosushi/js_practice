@@ -196,3 +196,152 @@ function lstName(theLastName) {
 
 
 --------------------------------
+
+###Recursion
+```
+function power(base, exponent) {
+    if (exponent == 0)
+        return 1;
+    else
+        return base * power(base, exponent -1)
+}
+
+console.log(power(2,3));   // 8
+```
+*This works, but its suuupa slow*
+(about 10 times slower than looping version)
+    => calling a single loop is cheaper than calling function multiple times
+
+**It is a trade-off between elegance and efficiency!**
+    -> the basic rule is *not to worry about efficiency till you know for sure that program is too slow*
+
+However, some problems are better solved by recursion!
+
+A case when the problem requires "exploring or processing several 'branches', in which each of which might branch out again into more branches"
+
+Like this one:
+```
+function findSolution(target) {
+    function find(start, history) {
+        if (start == target)
+            return history;
+        else if (start > target)
+            return null;
+        else
+            return find(start + 5, "(" + history " + 5")) ||
+                   find(start * 3, "(" + history " * 3"));
+    }
+    return find(1, "1");
+}
+
+console.log(findSolution(24))   // (((1 * 3) + 5) * 3)
+````
+
+Depending on the answer of the last part of find(), the stack flow diverses (something we covered in 110)!
+
+
+###Growing Functions
+
+How we come up with function:
+1. When you write the same code over and over again
+2. You need some functionality
+
+Name the functions that captures its main functionality
+    => makes the life easier for other programmers
+
+The best practice is to break down what the function needs to do,
+and make one function per each functionality
+    => easier to debug
+
+##Exercises
+
+**Q1 Minumum**
+"Write a function min that takes two arguments and returns their minimum."
+
+My solution:
+```
+function min(n1, n2) {
+  if (n1 < n2)
+    return n1;
+  else
+    return n2;
+};
+
+//Test cases:
+console.log(min(0, 10));
+// → 0
+console.log(min(0, -10));
+// → -10
+```
+
+
+**Q2 Recursion**
+"We’ve seen that % (the remainder operator) can be used to test whether a number is even or odd by using % 2 to check whether it’s divisible by two. Here’s another way to define whether a positive whole number is even or odd:
+
+    Zero is even.
+
+    One is odd.
+
+    For any other number N, its evenness is the same as N - 2.
+
+Define a recursive function isEven corresponding to this description. The function should accept a number parameter and return a Boolean."
+
+My solution:
+```
+function isEven(num) {
+  if (num == 0)
+    return true;
+  else if (num == 1)
+    return false;
+  else
+    return isEven(num-2)
+};
+
+console.log(isEven(50));
+// → true
+console.log(isEven(75));
+// → false
+```
+
+
+**Q3 Bean Counting**
+"Write a function countBs that takes a string as its only argument and returns a number that indicates how many uppercase “B” characters are in the string.
+
+Next, write a function called countChar that behaves like countBs, except it takes a second argument that indicates the character that is to be counted (rather than counting only uppercase “B” characters). Rewrite countBs to make use of this new function."
+
+
+My solution:
+```
+function countBs(str) {
+  var size = str.length - 1;
+  var count = 0;
+  for (var i=0; i<=size; i++) {
+    if (str.charAt(i) == "B")
+      count++
+  };
+  return count
+};
+
+function countChar(str, chr) {
+  var size = str.length - 1;
+  var count = 0;
+  for (var i=0; i<=size; i++) {
+    if (str.charAt(i) == chr)
+      count++
+  };
+  return count
+};
+
+function newCountBs(str) {
+  return countChar(str, "B");
+};
+
+
+//Test Cases:
+console.log(countBs("BBC"));
+// → 2
+console.log(countChar("kakkerlak", "k"));
+// → 4
+console.log(newCountBs("aaBBBaauuhBB"));
+// --> 4
+```
