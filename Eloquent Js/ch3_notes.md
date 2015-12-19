@@ -19,6 +19,7 @@ var f2 = function() {
 f2();
 console.log(x);
 // -> inside f2
+```
 
 ####Nested Scope
 It it totally fair to create new var inside a function
@@ -256,6 +257,7 @@ and make one function per each functionality
 ##Exercises
 
 **Q1 Minumum**
+
 "Write a function min that takes two arguments and returns their minimum."
 
 My solution:
@@ -276,6 +278,7 @@ console.log(min(0, -10));
 
 
 **Q2 Recursion**
+
 "We’ve seen that % (the remainder operator) can be used to test whether a number is even or odd by using % 2 to check whether it’s divisible by two. Here’s another way to define whether a positive whole number is even or odd:
 
     Zero is even.
@@ -305,6 +308,7 @@ console.log(isEven(75));
 
 
 **Q3 Bean Counting**
+
 "Write a function countBs that takes a string as its only argument and returns a number that indicates how many uppercase “B” characters are in the string.
 
 Next, write a function called countChar that behaves like countBs, except it takes a second argument that indicates the character that is to be counted (rather than counting only uppercase “B” characters). Rewrite countBs to make use of this new function."
