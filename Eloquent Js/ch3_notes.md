@@ -189,6 +189,7 @@ mjName("Jackson")   //This celebrity is Michael Jackson
 Once again, the closure returns:
 console.log(mjName);
 
+```
 //output
 function lstName(theLastName) {
     return nameIntro + firstName + " " + theLastname;
