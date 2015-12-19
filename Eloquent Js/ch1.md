@@ -1,0 +1,82 @@
+java has nothing do with javascript - it was only done for marketing reasons.
+
+ECMAScrit == Javascript
+
+#nowIknow
+
+Js are equipped with default 64 bits
+
+####Operators
+% is h operator to show the remainder
+```
+344 % 100 = 44
+```
+
+There are Infinity & -Infinity & NaN
+
+####Strings
+\ is called escaping
+    => implies a special effect chr
+If two backslash follow each other, it will cancel each other out
+
+```
+"Check this \n out " <= X
+"Check this \\n out" <= Ok
+
+
+typeof operator show the type of a thing
+ex. typeof 4.5      => number
+
+< & > can be applied to strings as well!
+
+```
+console.log("Atsushi" < "Zack")
+// true
+```
+Basically,
+
+non-alphabet < UPPERCASE < lowercase
+**A < Z**
+
+####Logical Operator
+
+Most things you already know, but a thing to note is:
+
+```
+console.log(true ? 1 : 2)
+// 1
+console.log(false ? 1 : 2)
+// 2
+```
+
+Boolean ? if-true-result : if-false-result
+
+Another cool thing is ==== which is the precise logical operator to check
+
+####Nifty work-around with logic operators
+
+|| will
+- return return value to left if it can be turned to true
+- will return value on right otherwise
+- on top of doing usual boolean comparison!
+
+```
+console.log(null || "YO")               //YO
+console.log("Judy" || "Mike")           //Judy
+console.log(true || "<- always true")   //ture
+```
+Another example is false && X => false
+
+**This is called short-circuit evaluation**
+
+###Auto Type Conversion
+I knew about num -> str, but!
+```
+console.log(8 * null)   //0
+console.log("5" - 1)    //4
+console.log("five" * 2) //NaN
+console.log(false == 0) //true
+
+//cool one
+console.log(null == undefined) //true!
+```
