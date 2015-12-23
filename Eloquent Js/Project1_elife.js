@@ -1,4 +1,5 @@
-/* NOTE: All code was provided by the book!
+/*
+ * NOTE: All code was provided by the book!
  * My intentino is by typing out all the code given, I will try
  * to understand how mid-sized program are organized in js!
 */
