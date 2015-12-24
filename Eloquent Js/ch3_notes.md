@@ -1,7 +1,7 @@
 #Functions!
 
 ###Scope
-Globa & Local scope
+Global & Local scope
 
 ```
 var x = "outside";
@@ -22,7 +22,7 @@ console.log(x);
 ```
 
 ####Nested Scope
-It it totally fair to create new var inside a function
+It is totally fair to create new var inside a function
 
 ```
 var landscape = function() {
@@ -54,7 +54,7 @@ console.log(landscape());
 
 In this example, the environment outside of landscape can't see flat or mountain functions!
 
-Each local scope can also see all the local scopes that contain it
+Each local scope can be seen by all the local scopes that contain it
 => All variables from blocks around a function's definitions are visible!
 
 => This way of scoping is called **lexical scoping!**
@@ -63,7 +63,7 @@ Each local scope can also see all the local scopes that contain it
 function can be defined by:
 
 1. var testFnc = function(){}
-2. function testFnc() {} //*function declaration
+2. function testFnc() {}    //*function declaration*
 
 the interesting part is that function declaration can be accessed from any part of the program
 
@@ -83,12 +83,15 @@ How do javascript programmers show the control flow of the program?
 
 take a look at this:
 ```
-function waddup(who) {
+function greet(who) {
     console.log("Waddup " + who);
 }
 
 greet("Harry");
+// Waddup Harry
+
 console.log("See you around");
+
 ```
 
 this code's call stacks are expressed as:
