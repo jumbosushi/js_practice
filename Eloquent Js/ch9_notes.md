@@ -183,6 +183,13 @@ console.log(animalCount.test("1123 cow"))
 // true
 ```
 
+*wait doesn't [789] and (7|8|9) does the same thing???*
+
+**REMEMBER that [ ] is more optimized than (| |)!!!**
+
+The short explanation is because | backtracks
+the longer reason is in [this stackoverflow](http://stackoverflow.com/questions/9801630/what-is-the-difference-between-square-brackets-and-parentheses-in-a-regex)
+
 using this concept...
 ```javascript
 /\b([01]+t?|\d+|[\w0-9]+x)\b/
@@ -295,3 +302,12 @@ var match = pattern.exec("xyzzy");
 console.log(match.index);
 // 4
 ```
+
+Another useful tool in RegExp is positive (?=) / negative(?!) lookahead
+
+Basically, its a if statement
+
+THe beauty is how it is used to check
+
+Anotehr trick to use part of RegExp is check but not include in replacement
+is to use $1 or $# counting method for ()!
