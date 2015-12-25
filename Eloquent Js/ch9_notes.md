@@ -244,3 +244,54 @@ console.log(s.replace(/\b(fbi|cia)\b/g, function(matched) {
   }))
 // the CIA and FBI
 ```
+
+RegEx "+". "* ", ?, and {} are thought to be **greedy** as in they try to take
+  as many characters as possible!
+
+```javascript
+function stripComments(code) {
+  return code.replace(/\/\/.*|\/\*[^]*\*\//g, "");
+}
+console.log(stripComments("1 /* a */ + /* b */ 1");
+// 1 1
+```
+
+to make the deduction as small as possible, use "?" !!!
+```javascript
+function stripComments(code) {
+  return code.replace(/\/\/.*|\/\*[^]*?\*//g, "");
+}
+console.log(stripComments("1 /* a */ + /* b */ 1");
+// 1 + 1
+```
+
+.search method returns the index of the match
+
+###RegExp Object!
+You can make RegExp expressions through making an object
+```javascript
+var test = new RegExp("[01]+");
+test.test("0100111011001")
+// true
+
+var yup = /y/g
+// automatically converts to RegExp object!
+```
+
+RegExp has "source" property which has the original string stored in it
+
+also has lastIndex property where it defines where the match will start!
+... well sort of
+
+"lastIndex" only does what we want it to do ONLY when "g" option is triggered
+in other words, only start from that point only in global RegExp operation
+
+Once match is successfull, the lastIndex is updated to be where the match was!
+
+```javascript
+var pattern = /y/g;
+pattern.lastIndex = 3;
+var match = pattern.exec("xyzzy");
+console.log(match.index);
+// 4
+```
