@@ -19,7 +19,7 @@ The content in the browser is organized into Tree structure called DOM
 
 Each DOM node has a nodeType property that identifies the type of node
 
-//From W#
+//From WSCSchool webstie
 * If the node is an element node, the nodeType property will return 1.
 * If the node is an attribute node, the nodeType property will return 2.
 * If the node is a text node, the nodeType property will return 3.
@@ -50,5 +50,4 @@ or you can make them inside a style tag!
 </style>
 ```
 
-window.requestAnimationFrame() is useful when you make an animation inside a
-browser
+window.requestAnimationFrame() is useful when you make an animation inside a browser
